@@ -40,16 +40,16 @@ public class PageService {
                 withMatcher("pageAliase", ExampleMatcher.GenericPropertyMatchers.exact());
 
         CmsPage cmsPage = new CmsPage();
-        if (StringUtil.isNullOrEmpty(queryPageRequest.getPageId())) {
+        if (!StringUtil.isNullOrEmpty(queryPageRequest.getPageId())) {
             cmsPage.setPageId(queryPageRequest.getPageId());
         }
-        if(StringUtil.isNullOrEmpty(queryPageRequest.getPageAliase())){
+        if(!StringUtil.isNullOrEmpty(queryPageRequest.getPageAliase())){
             cmsPage.setPageAliase(queryPageRequest.getPageAliase());
         }
-        if(StringUtil.isNullOrEmpty(queryPageRequest.getSiteId())){
+        if(!StringUtil.isNullOrEmpty(queryPageRequest.getSiteId())){
             cmsPage.setSiteId(queryPageRequest.getSiteId());
         }
-        if(StringUtil.isNullOrEmpty(queryPageRequest.getTemplateId())){
+        if(!StringUtil.isNullOrEmpty(queryPageRequest.getTemplateId())){
             cmsPage.setTemplateId(queryPageRequest.getTemplateId());
         }
         //分页参数
